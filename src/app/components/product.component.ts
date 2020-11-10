@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Proudct } from '../product.model';
 
@@ -10,14 +10,13 @@ import { Proudct } from '../product.model';
 })
 export class ProductComponent {
 
-    product: Proudct = {
+    // El componenete recibe una propiedad desde otro componente
+    @Input() product: Proudct;
+    @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
-        id: '1',
-        image: 'assets/images/1.jpg',
-        title: 'Playera 1',
-        price: 10,
-        description: 'Una gran playera'
-
+    addCart() {
+        console.log('Añadir al carrito');
+        this.productClicked.emit(this.product.id);
     }
 
 }
