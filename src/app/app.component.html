@@ -19,9 +19,10 @@
   <p *ngSwitchCase>Este es Tyrell</p>
   <p *ngSwitchCase>Este es Eliot</p>
   <p *ngSwitchDefault>No hay match</p>
-  
 
 </div>
+
+
 
 <button (click)="addItem()">Add Item</button>
 
@@ -37,11 +38,6 @@
 </ul>
 
 <div *ngFor="let product of products">
-    {{ product.title }}
-    <br>
-    <img [src]="product.image" style="height: auto; width: 200px;">
-    <br>
-    {{ product.price }}
-    
-</div>
 
+  <app-product></app-product>
+</div>
