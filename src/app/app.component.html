@@ -2,6 +2,8 @@
 
 <input type="text" [(ngModel)]="number">
 
+<input type="text" [(ngModel)]="nombre">
+
 <!--Impresión de la variable 'title' en pantalla-->
 <br>
 <br>
@@ -10,6 +12,9 @@
 <br>
 <br>
 <p><b>Tu número es: </b></p>{{ number }}
+<br>
+<br>
+<p><b>Tu nombre es: </b></p>{{ nombre }}
 
 <!--ngIf-->
 <br>
@@ -22,6 +27,17 @@
   <b>Uso de ngIf y operadores lógicos</b>
 </div>
 
+
+<div [ngSwitch]="nombre">
+  <p *ngSwitchCase="'Omar'">¡Hola, te estaba esperando Omar!</p>
+  <p *ngSwitchCase="'Elon'">¡Hola, qué gusto de verte Elon!</p>
+  <p *ngSwitchCase="'Tyrell'">¡Hola, ha pasado tiempo Tyrell!</p>
+  <p *ngSwitchCase="'Eliot'">¡Hola, que alegría que estés aquí Eliot!</p>
+  <p *ngSwitchDefault>Hola, nos da gusto verte :)</p>
+</div>
+
+<br>
+<br>
 
 <!--ngForOf-->
 <!--Se define un botón que agrega elementos a la lista de nombres con 
@@ -56,7 +72,7 @@
   <br>
   <!--El atributo src es encerrado entre corchetes con 
   el fin de modificarlo para utilizar una variable de js-->
-  <img [src]="product.image" alt=""> 
+  <img [src]="product.image" alt="">
   <br>
   ${{ product.price }}
 

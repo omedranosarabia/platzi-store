@@ -11,6 +11,7 @@ import { Product } from './product.model';
 export class AppComponent {
   title = 'platzi-store';
   number = '1';
+  nombre = 'Omar';
 
   // Array de datos utilizado para el ejemplo de ngFor
   items = ['Elon', 'Tyrell', 'Eliot'];
