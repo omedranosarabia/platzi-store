@@ -48,3 +48,16 @@
     <button (click)="deleteItem(i)">Delete</button>
   </li>
 </ul>
+
+<!--ngFor para recorrer un objeto-->
+<div *ngFor="let product of products">
+
+  {{ product.title }}
+  <br>
+  <!--El atributo src es encerrado entre corchetes con 
+  el fin de modificarlo para utilizar una variable de js-->
+  <img [src]="product.image" alt=""> 
+  <br>
+  ${{ product.price }}
+
+</div>
