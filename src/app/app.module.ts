@@ -4,8 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+// Se importa el componente ProductComponent
 import { ProductComponent } from './components/product.component';
 
+// Array de declaración de Angular
 @NgModule({
   declarations: [
     AppComponent,

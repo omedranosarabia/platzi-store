@@ -1,6 +1,11 @@
+// Se importa el decorador Component
+
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { Proudct } from '../product.model';
+import { Product } from '../product.model';
+
+// El decorador indica que rol va a cumplir esta clase
+// En este caso, al ser un componente se coloca el decorador "Component"
 
 @Component({
 
@@ -8,15 +13,17 @@ import { Proudct } from '../product.model';
     templateUrl: './product.component.html'
 
 })
+
+// Para que cualquier elemento en Angular pueda utilizar este componente 
+// se coloca la palabra "export" antes de "class"
 export class ProductComponent {
 
-    // El componenete recibe una propiedad desde otro componente
-    @Input() product: Proudct;
-    @Output() productClicked: EventEmitter<any> = new EventEmitter();
-
-    addCart() {
-        console.log('Añadir al carrito');
-        this.productClicked.emit(this.product.id);
+    product: Product = {
+        id: '1',
+        image: 'assets/images/1.jpg',
+        title: 'Playera 1',
+        price: 250,
+        description: 'Esta es la playera número 1'
     }
 
 }
