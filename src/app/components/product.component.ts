@@ -18,12 +18,14 @@ import { Product } from '../product.model';
 // se coloca la palabra "export" antes de "class"
 export class ProductComponent {
 
-    product: Product = {
-        id: '1',
-        image: 'assets/images/1.jpg',
-        title: 'Playera 1',
-        price: 250,
-        description: 'Esta es la playera número 1'
+    @Input() product: Product;
+
+    @Output() eventoAgregarCarrito = new EventEmitter<any>();
+
+    addCart(){
+        console.log("Agregado al carrito");
+        this.eventoAgregarCarrito.emit(this.product.id);
+
     }
 
 }

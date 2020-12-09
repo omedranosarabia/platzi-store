@@ -74,4 +74,9 @@ export class AppComponent {
 
   }
 
+  // Función en donde se recibe la variable Output enviada desde product.component.ts
+  recibirValorDeOutput(id: number){
+    console.log('El ID del producto es: ' + id + ' Y esto se está imprimiendo desde el Padre');
+  }
+
 }

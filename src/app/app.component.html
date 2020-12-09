@@ -4,6 +4,8 @@
 
 <input type="text" [(ngModel)]="nombre">
 
+
+
 <!--Impresión de la variable 'title' en pantalla-->
 <br>
 <br>
@@ -68,12 +70,5 @@
 <!--ngFor para recorrer un objeto-->
 <div *ngFor="let product of products">
 
-  {{ product.title }}
-  <br>
-  <!--El atributo src es encerrado entre corchetes con 
-  el fin de modificarlo para utilizar una variable de js-->
-  <img [src]="product.image" alt="">
-  <br>
-  ${{ product.price }}
-
+  <app-product (eventoAgregarCarrito)="recibirValorDeOutput($event)" [product]="product"></app-product>
 </div>
