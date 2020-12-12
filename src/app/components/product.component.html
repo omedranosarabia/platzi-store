@@ -1,6 +1,11 @@
-<h3>{{ product.title }}</h3>
+<div class="main_div">
+    <h3>{{ product.title }}</h3>
     <br>
     <img [src]="product.image" style="height: auto; width: 200px;">
     <br>
-    <strong>{{ product.price }}</strong>
-<button (click)="addCart()">Agregar al carrito</button>
+</div>
+<div>
+<div class="inferior">
+    <strong>$ {{ product.price }}</strong>
+    <button (click)="addCart()">Agregar al carrito</button>
+</div>

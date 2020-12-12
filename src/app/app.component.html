@@ -68,7 +68,10 @@
 </ul>
 
 <!--ngFor para recorrer un objeto-->
-<div *ngFor="let product of products">
-
-  <app-product (eventoAgregarCarrito)="recibirValorDeOutput($event)" [product]="product"></app-product>
+<div class="product-grid">
+  <app-product
+    *ngFor="let product of products"
+    (eventoAgregarCarrito)="recibirValorDeOutput($event)"
+    [product]="product">
+  </app-product>
 </div>
