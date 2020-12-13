@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 
 // Se importa el componente ProductComponent
 import { ProductComponent } from './components/product.component';
+import { CartComponent } from './cart/cart.component';
 
 // Array de declaración de Angular
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

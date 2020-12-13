@@ -60,13 +60,13 @@ export class AppComponent {
   ];
 
   // Método para agregar un nuevo nombre a la lista items
-  addItem() {
+  addItem(): void {
     this.items.push('Nuevo nombre');
   }
 
   // Se define una función para eliminar un nombre de la lista,
   // tipando el parámetro de nombre index como tipo number
-  deleteItem(index: number) {
+  deleteItem(index: number): void {
 
     console.log('Se borró ' + index);
 
@@ -75,7 +75,7 @@ export class AppComponent {
   }
 
   // Función en donde se recibe la variable Output enviada desde product.component.ts
-  recibirValorDeOutput(id: number){
+  recibirValorDeOutput(id: number): void {
     console.log('El ID del producto es: ' + id + ' Y esto se está imprimiendo desde el Padre');
   }
 

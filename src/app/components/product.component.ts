@@ -1,15 +1,15 @@
 // Se importa el decorador Component
 
-import { 
-    Component, 
-    Input, 
-    Output, 
-    EventEmitter, 
-    OnChanges, 
-    SimpleChanges, 
-    OnInit, 
-    DoCheck, 
-    OnDestroy 
+import {
+    Component,
+    Input,
+    Output,
+    EventEmitter,
+    OnChanges,
+    SimpleChanges,
+    OnInit,
+    DoCheck,
+    OnDestroy
 } from '@angular/core';
 
 import { Product } from '../product.model';
@@ -25,9 +25,9 @@ import { Product } from '../product.model';
 
 })
 
-// Para que cualquier elemento en Angular pueda utilizar este componente 
+// Para que cualquier elemento en Angular pueda utilizar este componente
 // se coloca la palabra "export" antes de "class"
-export class ProductComponent implements OnInit, DoCheck, OnDestroy{
+export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
     @Input() product: Product;
 
@@ -50,26 +50,26 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy{
     // }
 
     // Ocurre cuando el componente está listo y su interfaz está cargada
-    ngOnInit() {
+    ngOnInit(): void {
         console.log('3. ngOnInit');
     }
 
     // Detecta cambios ofreciendo la posibilidad de realizar una configuración
     // específica
-    ngDoCheck() {
+    ngDoCheck(): void {
 
         console.log('4. ngDoCheck');
 
     }
 
     // Se ejecuta cuando un componente se elimna
-    ngOnDestroy(){
+    ngOnDestroy(): void {
 
         console.log('OnDestroy');
     }
 
-    addCart() {
-        console.log("Agregado al carrito");
+    addCart(): void {
+        console.log('Agregado al carrito');
         this.eventoAgregarCarrito.emit(this.product.id);
 
     }
