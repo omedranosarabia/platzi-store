@@ -1,0 +1,25 @@
+:host {
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main_div {
+  text-align: center;
+  max-width: 100%;
+  height: calc(38vh - 16px);
+}
+
+.inferior {
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
