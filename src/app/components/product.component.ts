@@ -33,6 +33,7 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
     @Output() eventoAgregarCarrito = new EventEmitter<any>();
 
+    today = new Date();
     // Aquí es donde se contruye el componente
     constructor() {
 
