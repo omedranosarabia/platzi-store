@@ -9,7 +9,11 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product.component';
 import { CartComponent } from './cart/cart.component';
 
+<<<<<<< HEAD
 // Array de declaración de Angular
+=======
+
+>>>>>>> master
 @NgModule({
   declarations: [
     AppComponent,

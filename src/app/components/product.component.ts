@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Se importa el decorador Component
 
 import {
@@ -16,7 +17,17 @@ import { Product } from '../product.model';
 
 // El decorador indica que rol va a cumplir esta clase
 // En este caso, al ser un componente se coloca el decorador "Component"
+=======
+// Los decoradores ofrecen un contexto a los artefactos de Angular
+// Los decoradores definen el rol que va a cumplir la clase
+// Para este caso se importa el "Component" debido a que esta clase es un componente
+import { Component } from '@angular/core';
 
+// Importación del modelo 'Product'
+import { Product } from '../product.model';
+>>>>>>> master
+
+// Metadata del componente
 @Component({
 
     selector: 'app-product',
@@ -25,6 +36,7 @@ import { Product } from '../product.model';
 
 })
 
+<<<<<<< HEAD
 // Para que cualquier elemento en Angular pueda utilizar este componente
 // se coloca la palabra "export" antes de "class"
 export class ProductComponent implements OnInit, DoCheck, OnDestroy {
@@ -73,6 +85,19 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
         console.log('Agregado al carrito');
         this.eventoAgregarCarrito.emit(this.product.id);
 
+=======
+
+// Se define la clase y se coloca la palabra "export" para que esta pueda ser
+// utilizada desde cualquier parte de la aplicación
+export class ProductComponent {
+
+    product: Product = {
+        id: '1',
+        image: 'assets/images/1.jpg',
+        title: 'Playera 1',
+        price: 250,
+        description: 'Esta es la playera número 1'
+>>>>>>> master
     }
 
 }
