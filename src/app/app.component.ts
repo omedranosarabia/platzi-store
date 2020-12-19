@@ -13,6 +13,7 @@ export class AppComponent {
   number = '1';
   nombre = 'Omar';
 
+  power = 10;
   // Array de datos utilizado para el ejemplo de ngFor
   items = ['Elon', 'Tyrell', 'Eliot'];
 

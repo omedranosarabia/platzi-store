@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 // Se importa el componente ProductComponent
 import { ProductComponent } from './components/product.component';
 import { CartComponent } from './cart/cart.component';
+import { ExponentialPipe } from './exponential.pipe';
 
 // Array de declaración de Angular
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    ExponentialPipe
   ],
   imports: [
     BrowserModule,
