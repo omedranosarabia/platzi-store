@@ -1,0 +1,8 @@
+<!--ngFor para recorrer un objeto-->
+<div class="product-grid">
+    <app-product
+      *ngFor="let product of products"
+      (eventoAgregarCarrito)="recibirValorDeOutput($event)"
+      [product]="product">
+    </app-product>
+  </div>

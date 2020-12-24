@@ -1,0 +1,71 @@
+<p>demo works!</p>
+<input type="text" [(ngModel)]="title">
+
+<input type="text" [(ngModel)]="number">
+
+<input type="text" [(ngModel)]="nombre">
+
+
+<input type="text" [(ngModel)]="power">
+{{ power | exponential }}
+
+<!--Impresión de la variable 'title' en pantalla-->
+<br>
+<br>
+<p><b>Tu título es: </b></p>{{ title }}
+<!--Impresión de la variable 'number' en pantalla-->
+<br>
+<br>
+<p><b>Tu número es: </b></p>{{ number }}
+<br>
+<br>
+<p><b>Tu nombre es: </b></p>{{ nombre }}
+
+<!--ngIf-->
+<br>
+<br>
+<div *ngIf="title === 'Ice'">
+  <b>Este es un div utiliazndo ngIf</b>
+</div>
+
+<div *ngIf="title === 'Ice' && number === '2'">
+  <b>Uso de ngIf y operadores lógicos</b>
+</div>
+
+
+<div [ngSwitch]="nombre">
+  <p *ngSwitchCase="'Omar'">¡Hola, te estaba esperando Omar!</p>
+  <p *ngSwitchCase="'Elon'">¡Hola, qué gusto de verte Elon!</p>
+  <p *ngSwitchCase="'Tyrell'">¡Hola, ha pasado tiempo Tyrell!</p>
+  <p *ngSwitchCase="'Eliot'">¡Hola, que alegría que estés aquí Eliot!</p>
+  <p *ngSwitchDefault>Hola, nos da gusto verte :)</p>
+</div>
+
+<br>
+<br>
+
+<!--ngForOf-->
+<!--Se define un botón que agrega elementos a la lista de nombres con 
+  una acción definida entre paréntesis y una función depués del signo igual-->
+<br>
+<br>
+<button (click)="addItem()">Agregar nombre</button>
+
+<!--Se define la variable iteradora, en este caso 'name' seguido del array-->
+<h3>Lista de nombres</h3>
+<ul>
+  <li *ngIf="items.length === 0">La lista está vacía</li>
+
+  <li *ngFor="let name of items">
+    {{ name }}
+  </li>
+</ul>
+
+<h3>Lista de nombres y posiciones</h3>
+<ul>
+  <li *ngIf="items.length === 0">La lista está vacía</li>
+  <li *ngFor="let name of items; index as i">
+    {{ i }} {{ name }}
+    <button (click)="deleteItem(i)">Delete</button>
+  </li>
+</ul>
