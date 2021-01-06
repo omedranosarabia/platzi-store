@@ -12,6 +12,8 @@ import { ProductsService } from './../products.service';
 })
 export class ProductDetailComponent implements OnInit {
 
+  product: Product;
+
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService
@@ -21,8 +23,8 @@ export class ProductDetailComponent implements OnInit {
     // Mediante suscribe se escuchan los cambios en los parámetros
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
-      const product: Product = this.productService.getProduct(id);
-      console.log(product);
+      this.product = this.productService.getProduct(id);
+      console.log(this.product);
 
     });
 
