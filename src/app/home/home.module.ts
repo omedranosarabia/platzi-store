@@ -4,6 +4,9 @@ import { BannerComponent } from './components/banner/banner.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
 
+// Importación del shared module
+import { SharedModule } from './../shared/shared.module';
+
 @NgModule({
     declarations: [
         BannerComponent,
@@ -11,7 +14,8 @@ import { HomeComponent } from './components/home/home.component';
     ],
     imports: [
         CommonModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        SharedModule
     ]
 })
 
