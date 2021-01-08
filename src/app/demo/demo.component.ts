@@ -7,11 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  
   title = 'platzi-store';
   number = '1';
   nombre = 'Omar';
@@ -19,6 +14,11 @@ export class DemoComponent implements OnInit {
   power = 10;
   // Array de datos utilizado para el ejemplo de ngFor
   items = ['Elon', 'Tyrell', 'Eliot'];
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
   // Método para agregar un nuevo nombre a la lista items
   addItem(): void {

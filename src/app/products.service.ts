@@ -59,6 +59,6 @@ export class ProductsService {
   getProduct(id: string): Product {
     return this.products.find(item => id === item.id);
 
-   
+
   }
 }
