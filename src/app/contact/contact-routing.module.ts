@@ -6,10 +6,10 @@ import { ContactComponent } from './components/contact.component';
 
 const routes: Routes = [
 
-    { 
-        path: 'contact',
+    {
+        path: '',
         component: ContactComponent
-        
+
      }
 ];
 
@@ -24,5 +24,5 @@ const routes: Routes = [
 })
 
 export class ContactRoutingModule{
-    
+
 }

@@ -12,7 +12,7 @@ import {
     OnDestroy
 } from '@angular/core';
 
-import { Product } from '../product.model';
+import { Product } from '../../../product.model';
 
 // El decorador indica que rol va a cumplir esta clase
 // En este caso, al ser un componente se coloca el decorador "Component"
